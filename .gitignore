@@ -24,6 +24,11 @@
 *.lib
 
 # Executables
+hello_genetic_algo
 *.exe
 *.out
 *.app
+
+# Qt
+*.pro.user
+Makefile
