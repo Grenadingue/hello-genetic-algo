@@ -9,6 +9,12 @@ TARGET = hello_genetic_algo
 TEMPLATE = app
 
 SOURCES += \
-    main.cpp
+    main.cpp \
+    Controller.cpp \
+    Worker.cpp \
+    Chart.cpp
 
 HEADERS += \
+    Controller.hpp \
+    Worker.hpp \
+    Chart.hpp

@@ -1,11 +1,11 @@
 #include <QtWidgets/QApplication>
-#include <QDebug>
+#include "Controller.hpp"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    Controller geneticAlgoController;
 
-    qDebug() << "Hello genetic algo!";
-
+    geneticAlgoController.start();
     return a.exec();
 }
