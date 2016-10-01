@@ -31,4 +31,5 @@ hello_genetic_algo
 
 # Qt
 *.pro.user
+moc_*
 Makefile
