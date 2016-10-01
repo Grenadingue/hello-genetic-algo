@@ -1,4 +1,4 @@
-QT += core
+QT += core gui charts
 
 CONFIG += c++11
 

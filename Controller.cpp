@@ -1,4 +1,8 @@
+#include <QtCharts/QChartView>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QMainWindow>
 #include "Controller.hpp"
+#include "Chart.hpp"
 
 #include <QDebug>
 
@@ -26,6 +30,7 @@ void Controller::start()
 {
     qDebug() << Q_FUNC_INFO;
 
+    _view.initWindow();
     _workerThread.start();
     emit startAlgo();
 }
