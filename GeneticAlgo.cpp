@@ -170,6 +170,32 @@ void GeneticAlgo::_mateIndividualsToProduceOffspring()
 
 /*
 ** Uranium
+**
+** For 200 mutations ~1.30 % of genes are touched by mutation
+**
+** # Demonstation
+** Considerate
+** - population size = 400
+** - DNA (string) size = 116
+** - genocide size = 132, so offspring size = 132
+** - number of random mutations applied to offspring = 200
+**
+** 132 * 116 = 15312
+** in total, 15312 genes are generated from mating
+**
+** lets find the percentage of genes touched by mutation
+** 200 / 15312 = x / 100
+** 200 * 100 = 15312 * x
+** 20000 = 15312 * x
+** x = 20000 / 15312
+** 1.306165099 %
+**
+** lets verify our result
+** 15312 * 0.01306165099 = 199.999999959
+** 15312 * 0.98693834901 = 15112.000000041
+** 199.999999959 + 15112.000000041 = 15312
+** result seems correct, although the right digits which shouldn't be there
+** it may be due to the approximation of 1.306165099
 */
 void GeneticAlgo::_mutateOffspring()
 {
