@@ -66,6 +66,15 @@ void Chart::initWindow()
     _window->show();
 }
 
+void Chart::setMaximumScore(int maximumScore)
+{
+    qDebug() << Q_FUNC_INFO << maximumScore;
+
+    _maximumScore = maximumScore;
+    _maximumScoresSeries.append(0, _maximumScore);
+    axisY()->setRange(0, _maximumScore + 10);
+}
+
 void Chart::updateHighestScore(int iteration, int highestScore)
 {
     qDebug() << Q_FUNC_INFO << iteration << highestScore;

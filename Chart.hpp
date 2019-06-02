@@ -32,6 +32,7 @@ public:
     void initWindow();
 
 public slots:
+    void setMaximumScore(int maximumScore);
     void updateHighestScore(int iteration, int highestScore);
 };
 
