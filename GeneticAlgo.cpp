@@ -199,9 +199,11 @@ bool GeneticAlgo::_resultFound(unsigned long int i)
 void GeneticAlgo::doWork()
 {
     unsigned long int i = 0;
+    int theoreticalMaximumScore = _getTheoreticalMaximumRate();
 
     qDebug() << Q_FUNC_INFO;
 
+    emit setMaximumScore(theoreticalMaximumScore);
     emit updateHighestScore(0, 0);
     _initPopulation();
 
