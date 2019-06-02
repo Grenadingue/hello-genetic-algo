@@ -18,10 +18,12 @@ private:
     QMainWindow *_window;
     QChartView *_chartView;
     QLineSeries _currentHightScoreSeries;
+    QLineSeries _maximumScoresSeries;
     QValueAxis _axisX;
     QValueAxis _axisY;
     qreal _x;
     qreal _y;
+    qreal _maximumScore;
 
 public:
     Chart(QGraphicsItem *parent = 0, Qt::WindowFlags wFlags = 0);
