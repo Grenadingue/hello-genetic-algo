@@ -1,5 +1,4 @@
 #include "Chart.hpp"
-#include "Worker.hpp"
 
 #include <QDebug>
 

@@ -2,20 +2,19 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
 #include "Controller.hpp"
-#include "Chart.hpp"
 
 #include <QDebug>
 
 Controller::Controller()
-    : _geneticAlgo(new Worker)
+    : _worker(new GeneticAlgo)
 {
     qDebug() << Q_FUNC_INFO;
 
-    _geneticAlgo->moveToThread(&_workerThread);
+    _worker->moveToThread(&_workerThread);
 
-    connect(this, &Controller::startAlgo, _geneticAlgo, &Worker::doWork);
-    connect(_geneticAlgo, &Worker::updateHighestScore, &_view, &Chart::updateHighestScore);
-    connect(&_workerThread, &QThread::finished, _geneticAlgo, &QObject::deleteLater);
+    connect(this, &Controller::startAlgo, _worker, &GeneticAlgo::doWork);
+    connect(_worker, &GeneticAlgo::updateHighestScore, &_view, &Chart::updateHighestScore);
+    connect(&_workerThread, &QThread::finished, _worker, &QObject::deleteLater);
 }
 
 Controller::~Controller()

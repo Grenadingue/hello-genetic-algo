@@ -2,7 +2,7 @@
 # define    CONTROLLER_HPP_
 
 # include <QThread>
-# include "Worker.hpp"
+# include "GeneticAlgo.hpp"
 # include "Chart.hpp"
 
 class Controller : public QObject
@@ -11,7 +11,7 @@ class Controller : public QObject
 
 private:
     QThread _workerThread;
-    Worker *_geneticAlgo;
+    GeneticAlgo *_worker;
     Chart _view;
 
 public:

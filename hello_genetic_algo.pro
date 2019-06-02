@@ -11,10 +11,10 @@ TEMPLATE = app
 SOURCES += \
     main.cpp \
     Controller.cpp \
-    Worker.cpp \
+    GeneticAlgo.cpp \
     Chart.cpp
 
 HEADERS += \
     Controller.hpp \
-    Worker.hpp \
+    GeneticAlgo.hpp \
     Chart.hpp
