@@ -82,6 +82,6 @@ void Chart::updateHighestScore(int iteration, int highestScore)
     _x = iteration;
     _y = highestScore;
     axisX()->setRange(0, _x + 10);
-    axisY()->setRange(0, _y + 10);
     _currentHightScoreSeries.append(_x, _y);
+    _maximumScoresSeries.append(_x, _maximumScore);
 }
