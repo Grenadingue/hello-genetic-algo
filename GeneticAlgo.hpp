@@ -40,6 +40,7 @@ public slots:
     void doWork();
 
 signals:
+    void setMaximumScore(int maximumScore);
     void updateHighestScore(int iteration, int highestScore);
 };
 

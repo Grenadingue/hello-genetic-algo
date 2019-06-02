@@ -14,6 +14,7 @@ Controller::Controller()
 
     connect(this, &Controller::startAlgo, _worker, &GeneticAlgo::doWork);
     connect(_worker, &GeneticAlgo::updateHighestScore, &_view, &Chart::updateHighestScore);
+    connect(_worker, &GeneticAlgo::setMaximumScore, &_view, &Chart::setMaximumScore);
     connect(&_workerThread, &QThread::finished, _worker, &QObject::deleteLater);
 }
 
