@@ -6,7 +6,7 @@ Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags):
     QChart(parent, wFlags),
     _window(new QMainWindow),
     _chartView(new QChartView(this)),
-    _series(this),
+    _currentHightScoreSeries(this),
     _x(0),
     _y(0)
 {
@@ -15,10 +15,10 @@ Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags):
     qDebug() << Q_FUNC_INFO;
 
     pen.setWidth(2);
-    _series.setPen(pen);
+    _currentHightScoreSeries.setPen(redPen);
 
     // Set serie's name
-    _series.setName("Best individual score");
+    _currentHightScoreSeries.setName("Best individual score");
 
     // Set x axis legend
     _axisX.setTitleText("x = number of iterations");
@@ -29,12 +29,12 @@ Chart::Chart(QGraphicsItem *parent, Qt::WindowFlags wFlags):
     _axisY.setTitleVisible(true);
 
     // Init serie with axis
-    addSeries(&_series);
-    setAxisX(&_axisX, &_series);
-    setAxisY(&_axisY, &_series);
+    addSeries(&_currentHightScoreSeries);
+    setAxisX(&_axisX, &_currentHightScoreSeries);
+    setAxisY(&_axisY, &_currentHightScoreSeries);
 
     // Init first (x, y) point
-    _series.append(_x, _y);
+    _currentHightScoreSeries.append(_x, _y);
 }
 
 Chart::~Chart()
@@ -60,5 +60,5 @@ void Chart::updateHighestScore(int iteration, int highestScore)
     _y = highestScore;
     axisX()->setRange(0, _x + 10);
     axisY()->setRange(0, _y + 10);
-    _series.append(_x, _y);
+    _currentHightScoreSeries.append(_x, _y);
 }

@@ -17,7 +17,7 @@ class Chart : public QChart
 private:
     QMainWindow *_window;
     QChartView *_chartView;
-    QLineSeries _series;
+    QLineSeries _currentHightScoreSeries;
     QValueAxis _axisX;
     QValueAxis _axisY;
     qreal _x;
