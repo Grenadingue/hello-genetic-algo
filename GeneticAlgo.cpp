@@ -173,7 +173,7 @@ void GeneticAlgo::_mateIndividualsToProduceOffspring()
 */
 void GeneticAlgo::_mutateOffspring()
 {
-    for (int i = 0; i != 4; ++i)
+    for (int i = 0; i != 200; ++i)
         _offspring[randomNumberInRange(0, _genocideSize - 1)][randomNumberInRange(0, _referenceString.size() - 1)] = QChar(randomNumberInRange(' ', '~'));
 }
 
