@@ -224,7 +224,7 @@ bool GeneticAlgo::_resultFound(unsigned long int i)
 
 void GeneticAlgo::doWork()
 {
-    unsigned long int i = 0;
+    unsigned long int i = 1;
     int theoreticalMaximumScore = _getTheoreticalMaximumRate();
 
     qDebug() << Q_FUNC_INFO;
