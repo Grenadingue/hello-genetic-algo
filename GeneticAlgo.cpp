@@ -25,7 +25,7 @@ QString randomString(int size)
 }
 
 GeneticAlgo::GeneticAlgo()
-    : _referenceString("abcdzGa4cyrf7b f8 4**7-+we+f+ew6r5f+wf6hythr9+t5934~ t59h59+9sd;m;ldc ;aZG79QWbcdeK'wlkncwe[jnec[wo'eodw  q3289rhfcb"),
+    : _referenceString("72*?{(__]e|q=zM1Mu@Zk\"$aZX'R2tiMG8R^i:#DQKmT$DYVXQVj5;Q/V-Psy!s9A<F'2XNlVP,1*r#F}Z^inq]<t_f^fz^\"79E_TBk[WsLUBSF0~=M1"),
       _populationSize(400),
       _genocideSize(132), // 33 % of population
       _highestScore(0)
